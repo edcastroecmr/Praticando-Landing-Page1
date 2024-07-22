@@ -1,0 +1,75 @@
+.body{
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "hero hero hero hero"
+                         "about about about about"
+                         "services services services services"
+                         "services2 services2 services2 services2"
+                         "projects projects projects projects"
+                         "footer footer footer footer";
+    grid-template-rows: auto;
+    
+       
+}
+
+/* =========================Grid areas================================== */
+/* ===============================header=================================== */
+
+.header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    min-height: 75px;
+}
+header h1{
+    font-size: 25px;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+.header nav .menu{
+    display: flex;
+    font-size: 20px;
+}
+.header nav .menu li a{
+    margin-left: 30px;
+    padding: 10px 30px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    border-radius: 50px;
+}
+.header h1:hover{
+    color: coral;
+}
+.header nav .menu li a:hover{
+    background-color: coral;
+    color: white;
+    
+}
+/* ===============================hero=================================== */
+.hero{
+    grid-area: hero;
+    background-color: blue;
+    font-size: 50px;
+}
+.about{
+    grid-area: about;
+    background-color: blueviolet;
+}
+.services{
+    grid-area: services;
+    background-color: brown;
+}
+.services2{
+    grid-area: services;
+    background-color: orange;
+}
+.projects{
+    grid-area: projects;
+    background-color: chartreuse;
+}
+.footer{
+    grid-area: footer;
+    background-color: crimson;
+}
