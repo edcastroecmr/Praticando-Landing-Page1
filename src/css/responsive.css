@@ -1,0 +1,11 @@
+@media(max-width:900px){
+    .header nav .menu{
+        display: none;
+    }
+}
+
+/* @media(max-width:459px){
+    .hero h2{
+        text-align: center;
+    }
+} */

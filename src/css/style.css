@@ -3,11 +3,11 @@
     grid-template-areas: "header header header header"
                          "hero hero hero hero"
                          "about about about about"
+                         "about2 about2 about2 about2"
                          "services services services services"
-                         "services2 services2 services2 services2"
                          "projects projects projects projects"
                          "footer footer footer footer";
-    grid-template-rows: auto;
+    
     
        
 }
@@ -23,9 +23,19 @@
     padding: 20px 40px;
     min-height: 75px;
 }
-header h1{
+.divlogo{
+    display: flex;
+    align-items: center;
+}
+.logomamute{
+    width: 80px;
+    height: 60px;
+}
+
+header a h1{
     font-size: 25px;
     font-weight: 700;
+    margin-left: 15px;
     transition: 0.3s ease-in-out;
 }
 .header nav .menu{
@@ -39,7 +49,7 @@ header h1{
     transition: 0.3s ease-in-out;
     border-radius: 50px;
 }
-.header h1:hover{
+.header a h1:hover{
     color: coral;
 }
 .header nav .menu li a:hover{
@@ -49,27 +59,219 @@ header h1{
 }
 /* ===============================hero=================================== */
 .hero{
+    display: flex;
     grid-area: hero;
-    background-color: blue;
-    font-size: 50px;
+    background-image: url(../images/lemons.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+
 }
+.hero h2{
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    
+}
+.setapreta{ 
+    position: absolute;
+    margin-bottom: 37px;
+    bottom: 0;
+}
+
+/* ====================================about===================================== */
+
 .about{
     grid-area: about;
-    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
+.textabout{
+    padding: 8%;
+    height: 100%;
+}
+.textabout p{
+    margin: 25px 0px ;
+}
+.about .imagem-about{
+    background-image: url(../images/bridge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    min-width: 50%;
+}
+.about h2{
+    font-size: 22px;
+}
+.about p, .about a{
+     font-size: 18px ;
+}
+
+
+/* ============================about2==================================== */
+
+.about2{
+    grid-area: about2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.about2 .textabout2{
+    padding: 8%;
+    height: 100%;
+    flex:0 1 100%;
+}
+.textabout2 p{
+      margin: 25px 0px ;
+
+}
+.about2 .imagem-about-2{
+    background-image: url(../images/sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    flex:0 1 100%;
+    min-width: 50%;
+}
+.about2 h2{
+    font-size: 22px;
+}
+.about2 p, .about2 a{
+     font-size: 18px ;
+}
+.saibamais{
+    transition: 0.4s ease-in-out;
+}
+.saibamais:hover{
+    color: coral;
+}
+
+/* =================================Services============================================ */
+
 .services{
     grid-area: services;
-    background-color: brown;
-}
-.services2{
-    grid-area: services;
     background-color: orange;
+    display: flex;
+    height: 96vh;
+
 }
+.bolinha1{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    max-height: 100%;
+ 
+
+}
+.bolinha1 img{
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+.bolinha1 h2 ,.bolinha1 p{
+    font-size: 20px;
+}
+.bolinha1 p{ 
+    margin-top: 20px;
+    margin-left: 54px;
+    margin-right: 54px;
+}
+
+.bolinha2{
+    background-color: lightpink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    max-height: 100%;
+
+    
+
+}
+.bolinha2 img{
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+.bolinha2 h2 ,.bolinha2 p{
+    font-size: 20px;
+}
+.bolinha2 p{ 
+    margin-top: 20px;
+    margin-left: 54px;
+    margin-right: 54px;
+}
+/* =================================projects===================================== */
 .projects{
     grid-area: projects;
-    background-color: chartreuse;
+    display: grid;
+    grid-template-columns: repeat(4,1fr)
+
 }
+
+.projects img{
+    max-width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+.projects img:hover{
+       opacity: 0.8;
+}
+
+
+/* ==========================footer================================================ */
 .footer{
     grid-area: footer;
-    background-color: crimson;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 60vh;
+}
+
+.footer h2{
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.footer-links{
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.footer-links li{
+    margin: 20px;
+    transition: 0.4s ease-in-out;
+}
+.footer-media{
+    display: flex;
+    font-size: 25px;
+}
+.footer-media li{
+    margin: 20px; 
+    transition: 0.4s ease-in-out;
+}
+.footer-links li:hover{
+    color: white;
+    cursor: pointer;
+}
+.footer .footer-media li:hover{
+    color: white;
+    cursor: pointer;
 }
