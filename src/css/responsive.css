@@ -1,11 +1,29 @@
-@media(max-width:900px){
-    .header nav .menu{
-        display: none;
+/* ================================480px================================== */
+ @media(max-width:820px){
+
+    .services{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .projects{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+ } 
+@media(max-width:480px){
+    .about{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .projects{
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 
-/* @media(max-width:459px){
-    .hero h2{
-        text-align: center;
-    }
-} */
+

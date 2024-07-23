@@ -3,7 +3,6 @@
     grid-template-areas: "header header header header"
                          "hero hero hero hero"
                          "about about about about"
-                         "about2 about2 about2 about2"
                          "services services services services"
                          "projects projects projects projects"
                          "footer footer footer footer";
@@ -36,7 +35,7 @@ header a h1{
     font-size: 25px;
     font-weight: 700;
     margin-left: 15px;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 .header nav .menu{
     display: flex;
@@ -46,7 +45,7 @@ header a h1{
     margin-left: 30px;
     padding: 10px 30px;
     font-weight: 600;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
     border-radius: 50px;
 }
 .header a h1:hover{
@@ -57,11 +56,12 @@ header a h1{
     color: white;
     
 }
+
 /* ===============================hero=================================== */
 .hero{
     display: flex;
     grid-area: hero;
-    background-image: url(../images/lemons.jpg);
+    background-image: url(../images/CASA4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -76,37 +76,60 @@ header a h1{
     font-size: 40px;
     font-weight: 500;
     text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+
+    
     
 }
 .setapreta{ 
     position: absolute;
     margin-bottom: 37px;
     bottom: 0;
+    animation: downarrow 0.7s infinite alternate ease-in-out;  
+}
+@-webkit-keyframes downarrow {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(15px);
+        opacity: 0.4;
+    }
 }
 
 /* ====================================about===================================== */
 
 .about{
     grid-area: about;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 2;
+    margin: 0 auto;
 }
-.textabout{
-    padding: 8%;
+.textabout , .textabout2{
+    padding: 20%;
     height: 100%;
 }
-.textabout p{
+.textabout p, .textabout2 p{
     margin: 25px 0px ;
 }
 .about .imagem-about{
-    background-image: url(../images/bridge.jpg);
+    background-image: url(../images/CASA1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+.imagem-about-2{
+    background-image: url(../images/CASA4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    min-width: 50%;
+    width: 100%;
 }
 .about h2{
     font-size: 22px;
@@ -115,40 +138,6 @@ header a h1{
      font-size: 18px ;
 }
 
-
-/* ============================about2==================================== */
-
-.about2{
-    grid-area: about2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-}
-.about2 .textabout2{
-    padding: 8%;
-    height: 100%;
-    flex:0 1 100%;
-}
-.textabout2 p{
-      margin: 25px 0px ;
-
-}
-.about2 .imagem-about-2{
-    background-image: url(../images/sky.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    flex:0 1 100%;
-    min-width: 50%;
-}
-.about2 h2{
-    font-size: 22px;
-}
-.about2 p, .about2 a{
-     font-size: 18px ;
-}
 .saibamais{
     transition: 0.4s ease-in-out;
 }
@@ -160,9 +149,8 @@ header a h1{
 
 .services{
     grid-area: services;
-    background-color: orange;
-    display: flex;
-    height: 96vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);  
 
 }
 .bolinha1{
@@ -171,8 +159,8 @@ header a h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 50%;
-    max-height: 100%;
+    height: 100%;
+    padding: 70px 20px;
  
 
 }
@@ -195,11 +183,9 @@ header a h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 50%;
-    max-height: 100%;
-
+    height: 100%;
+    padding: 70px 20px;
     
-
 }
 .bolinha2 img{
     margin-bottom: 30px;
@@ -217,13 +203,15 @@ header a h1{
 .projects{
     grid-area: projects;
     display: grid;
-    grid-template-columns: repeat(4,1fr)
+    grid-template-columns: repeat(4,1fr);
+    height: 55vh;
 
 }
 
 .projects img{
     max-width: 100%;
     height: 100%;
+    min-height: 100%;
     transition: 0.3s ease-in-out;
 }
 .projects img:hover{
@@ -239,7 +227,6 @@ header a h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     height: 60vh;
 }
 
